@@ -9,8 +9,28 @@ Purpose:
 - Outputs a clean report for Shopify import validation
 """
 
-import pandas as pd
-import os
+import requests
+import io
+
+all_rows = []
+
+for category, url in LAYER1_PATHS.items():
+    try:
+        print(f"[INFO] Downloading: {category}")
+
+        response = requests.get(url)
+        response.raise_for_status()
+
+        file_bytes = io.BytesIO(response.content)
+
+        df = pd.read_excel(file_bytes)
+        df["Category"] = category
+        all_rows.append(df)
+
+        print(f"[OK] Loaded: {category}")
+
+    except Exception as e:
+        print(f"[ERROR] Could not load {category}: {e}")
 
 # -------------------------------------------
 # CONFIG — update these with actual file paths
@@ -46,14 +66,38 @@ master = pd.concat(all_rows, ignore_index=True)
 master["SKU"] = master["SKU"].astype(str).str.strip()
 master["Handle"] = master["Handle"].astype(str).str.strip().str.lower()
 
-# Detect duplicates
-duplicate_skus = master[master.duplicated("SKU", keep=False)]
-duplicate_handles = master[master.duplicated("Handle", keep=False)]
+# Normalize column names
+master.columns = master.columns.str.strip().str.lower()
+
+# Required columns
+required_cols = ["sku", "handle", "category"]
+
+for col in required_cols:
+    if col not in master.columns:
+        master[col] = ""
+
+# After normalization:
+master["sku"] = master["sku"].astype(str).str.strip()
+master["handle"] = master["handle"].astype(str).str.strip().str.lower()
+
+# Detect duplicates (SKU + Handle)
+duplicate_skus = master[master.duplicated("sku", keep=False)].sort_values("sku")
+duplicate_handles = master[master.duplicated("handle", keep=False)].sort_values("handle")
+
+duplicate_skus.to_csv("duplicate_skus_report.csv", index=False)
+duplicate_handles.to_csv("duplicate_handles_report.csv", index=False)
+
+print("\n---- SCAN COMPLETE ----")
+print(f"Duplicate SKUs found: {len(duplicate_skus)}")
+print(f"Duplicate Handles found: {len(duplicate_handles)}")
+print("Reports saved as CSV files in script directory.")
 
 # Save reports
 duplicate_skus.to_csv("duplicate_skus_report.csv", index=False)
 duplicate_handles.to_csv("duplicate_handles_report.csv", index=False)
 
+print("Starting SolThrive Duplicate Scanner...")
+print("---------------------------------------\n")
 print("\n---- SCAN COMPLETE ----")
 print(f"Duplicate SKUs: {len(duplicate_skus)}")
 print(f"Duplicate Handles: {len(duplicate_handles)}")
