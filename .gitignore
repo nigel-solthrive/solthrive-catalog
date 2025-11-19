@@ -1,0 +1,51 @@
+# ====================================
+# SolThrive Catalog Repo — .gitignore
+# Prevents large, temporary, or auto-generated files
+# ====================================
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment folders
+venv/
+env/
+.env/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# CSV outputs from automation runs
+*.csv
+*.tsv
+
+# Local logs or debug files
+*.log
+*.tmp
+
+# Node modules (future dashboard or tools)
+node_modules/
+
+# IDE settings (VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+
+# Build folders
+dist/
+build/
+
+# Python package metadata
+*.egg-info/
+*.egg
+
+# Byte-compiled exports from Octoparse or processing
+*_output/
+automation_outputs/
+
+# Private config keys (just in case)
+secret_config.json
+*.key
+*.token
