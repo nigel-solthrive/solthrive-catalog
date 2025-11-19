@@ -1,4 +1,5 @@
 # 🌞 SolThrive Catalog Repository  
+
 Master index and documentation for the SolThrive Shopify product catalog — including Layer 1 data, Layer 2 SEO enhancements, and future Layer 3 specification automation.
 
 This repo exists to organize and centralize all the technical documentation and folder structure used across the SolThrive Shopify Catalog stored in Google Drive. It will become the foundation for Layer 3 (Spec Matrix Builder), Layer 4 (Automation Engine), and future internal tools.
@@ -100,3 +101,38 @@ A web-based tool for:
 
 This repo is the foundation for SolThrive’s long-term catalog infrastructure.  
 As the business grows, this documentation and structure will grow with it.
+
+---
+
+## 🔧 How to Contribute / Make Changes
+
+This repo uses a simple and clean workflow:
+
+### 1. Make updates on the `main` branch  
+For now, commits can be made directly to `main`.
+
+### 2. Follow these commit message rules  
+- Use short, clear messages  
+- Examples:  
+  - `Added Layer 3 spec blueprint`  
+  - `Updated catalog index`  
+  - `Created duplicate-check script`  
+  - `Cleaned docs folder structure`
+
+### 3. Keep all documentation inside `/docs`  
+This ensures future automation and collaborators always know where to look.
+
+### 4. Keep scripts inside `/scripts`  
+All Python, ETL, or processing scripts go here.
+
+### 5. Do NOT commit:  
+- Large CSV files  
+- Raw scrape outputs  
+- Octoparse exports  
+- API keys  
+- Local environment files  
+(The `.gitignore` already protects you.)
+
+### 6. For major updates:  
+Tag a new version under **Releases** so the automation pipeline can reference specific versions.
+
