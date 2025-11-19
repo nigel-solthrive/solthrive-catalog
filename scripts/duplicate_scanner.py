@@ -15,17 +15,15 @@ import os
 # -------------------------------------------
 # CONFIG — update these with actual file paths
 # -------------------------------------------
-LAYER1_PATHS = {
-    "BOS": "path/to/BOS_Layer_1",
-    "Inverters": "path/to/Inverters_Layer_1",
-    "Solar Panels": "path/to/SolarPanels_Layer_1",
-    "Storage": "path/to/Storage_Layer_1",
-    "Racking": "path/to/Racking_Layer_1",
-    "Monitoring": "path/to/Monitoring_Layer_1",
-    "EV": "path/to/EV_Layer_1",
-    "Sealants": "path/to/Sealants_Layer_1",
-    "PreBundled": "path/to/PreBundled_Layer_1",
-}
+import json
+
+# Load config
+config_path = os.path.join(os.path.dirname(__file__), "config.json")
+
+with open(config_path, "r") as f:
+    config = json.load(f)
+
+LAYER1_PATHS = config.get("LAYER1_PATHS", {})
 
 # -------------------------------------------
 # MAIN SCANNER
