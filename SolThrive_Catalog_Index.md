@@ -57,7 +57,7 @@ SolThrive_Shopify_Catalog/
    BOS_Data/
       ├── BOS_Layer_1
       ├── BOS_Layer_2
-      ├── BOS_All_Specs
+      ├── BOS_Specs
       ├── Template
       ├── CSV/
       ├── Drive Explorer/
@@ -72,7 +72,7 @@ SolThrive_Shopify_Catalog/
    EV_Data/
       ├── EV_Layer_1
       ├── EV_Layer_2
-      ├── EV_All_Specs
+      ├── EV_Specs
       ├── Template
       ├── CSV/
       ├── Drive Explorer/
@@ -87,7 +87,7 @@ SolThrive_Shopify_Catalog/
    Monitoring_Data/
       ├── Monitoring_Layer_1
       ├── Monitoring_Layer_2
-      ├── Monitoring_All_Specs
+      ├── Monitoring_Specs
       ├── Template
       ├── CSV/
       ├── Drive Explorer/
@@ -99,10 +99,10 @@ SolThrive_Shopify_Catalog/
 ## 🏗️ 7. Racking & Mounting
 ```
 SolThrive_Shopify_Catalog/
-   Racking_Specs.2/
+   Racking_Data/
       ├── Racking_Layer_1
       ├── Racking_Layer_2
-      ├── Racking_All_Specs
+      ├── Racking_Specs
       ├── Template
       ├── CSV/
       ├── Drive Explorer/
@@ -117,7 +117,7 @@ SolThrive_Shopify_Catalog/
    Sealants_Data/
       ├── Sealants_Layer_1
       ├── Sealants_Layer_2
-      ├── Sealants_All_Specs
+      ├── Sealants_Specs
       ├── Template
       ├── CSV/
       ├── Drive Explorer/
@@ -132,7 +132,7 @@ SolThrive_Shopify_Catalog/
    Pre-Bundled_Data/
       ├── PreBundled_Layer_1
       ├── PreBundled_Layer_2
-      ├── PreBundled_All_Specs
+      ├── PreBundled_Specs
       ├── Template
       ├── CSV/
       ├── Drive Explorer/
