@@ -1,13 +1,13 @@
 {
   "LAYER1_PATHS": {
-    "BOS": "https://drive.google.com/uc?id=1lSRgimiGAZiaoBV6ILS_9Btgmo2e3QTC9S3pGjCmQqM&export=download",
-    "EV": "https://drive.google.com/uc?id=1dIKNOAL6z4Vswds0Q524d6F0JR4Fq5zvM0uwFSsR9M0&export=download",
-    "Inverters": "https://drive.google.com/uc?id=1sOxOXuoUFX1AZ6Jrs1ZJJZFzmG2eaQdm569hPtDx5k8&export=download",
-    "Monitoring": "https://drive.google.com/uc?id=1vCr9EkuH-5Ioib_2pTMMgHV_ssMoZf7wLuv-G-MyDYI&export=download",
-    "PreBundled": "https://drive.google.com/uc?id=1173zQpgGYQD6QzFB3io_N0o0v47QIhbLOxSJbStGtME&export=download",
-    "Racking": "https://drive.google.com/uc?id=1mMyAA1OTyltk-LqLgwdO6_O8dBFkxuiJfLGHNxLsxR0&export=download",
-    "Sealants": "https://drive.google.com/uc?id=1Gmz8RrmtHuZ6KWFr2PgNSUb85dbc3kFBdEfdfbvfxQ0&export=download",
-    "SolarPanels": "https://drive.google.com/uc?id=1SIaecBF8vd8Y_q1r2M1uTFPaptAS02kYHTtBte7yCyQ&export=download",
-    "Storage": "https://drive.google.com/uc?id=1ju9m8L5oXqBL87--pRD17U8hnZPnbGsCVBJ_VuYm_tM&export=download"
+    "BOS": "https://docs.google.com/spreadsheets/d/1lSRgimiGAZiaoBV6ILS_9Btgmo2e3QTC9S3pGjCmQqM/export?format=xlsx",
+    "EV": "https://docs.google.com/spreadsheets/d/1dIKNOAL6z4Vswds0Q524d6F0JR4Fq5zvM0uwFSsR9M0/export?format=xlsx",
+    "Inverters": "https://docs.google.com/spreadsheets/d/1sOxOXuoUFX1AZ6Jrs1ZJJZFzmG2eaQdm569hPtDx5k8/export?format=xlsx",
+    "Monitoring": "https://docs.google.com/spreadsheets/d/1vCr9EkuH-5Ioib_2pTMMgHV_ssMoZf7wLuv-G-MyDYI/export?format=xlsx",
+    "PreBundled": "https://docs.google.com/spreadsheets/d/1173zQpgGYQD6QzFB3io_N0o0v47QIhbLOxSJbStGtME/export?format=xlsx",
+    "Racking": "https://docs.google.com/spreadsheets/d/1mMyAA1OTyltk-LqLgwdO6_O8dBFkxuiJfLGHNxLsxR0/export?format=xlsx",
+    "Sealants": "https://docs.google.com/spreadsheets/d/1Gmz8RrmtHuZ6KWFr2PgNSUb85dbc3kFBdEfdfbvfxQ0/export?format=xlsx",
+    "SolarPanels": "https://docs.google.com/spreadsheets/d/1SIaecBF8vd8Y_q1r2M1uTFPaptAS02kYHTtBte7yCyQ/export?format=xlsx",
+    "Storage": "https://docs.google.com/spreadsheets/d/1ju9m8L5oXqBL87--pRD17U8hnZPnbGsCVBJ_VuYm_tM/export?format=xlsx"
   }
 }
